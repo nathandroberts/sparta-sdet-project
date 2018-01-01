@@ -1,0 +1,8 @@
+<h1><%= @title %></h1>
+<% @title_holder_data.each do |data| %>
+  <h3><%= data['weight_class'].gsub('_', ' ') %></h3>
+  <p><%= data['first_name'] %> <%= data['last_name'] %></p>
+  <p> W: <%= data['wins'] %> L: <%= data['losses'] %></p>
+  <img  width="200"src="<%= data['belt_thumbnail'] %>" alt="<%= data['last_name'] %> image">
+  <a href="<%= data['link'] %>">More info</a>
+<% end %>

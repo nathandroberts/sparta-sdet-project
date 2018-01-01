@@ -1,0 +1,7 @@
+<h1><%= @title %></h1>
+<% @media_data.each do |data| %>
+  <h3><%= data['title'].gsub('MetroPCS', '') %></h3>
+  <p><%= data['description'] %></p>
+  <video src="<%= data['mobile_video_url'] %>" controls poster="<%= data['thumbnail'] %>"></video>
+
+<% end %>
