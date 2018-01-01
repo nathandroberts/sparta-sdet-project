@@ -35,6 +35,7 @@ class VideosController < Sinatra::Base
   get '/search' do
     @title = 'Fighter Search'
     @fighter_data = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/fighters").body)
+    @name_input = params[:fighter_search]
     erb :'api/search'
   end
 

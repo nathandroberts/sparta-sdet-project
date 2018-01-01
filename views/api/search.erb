@@ -1,7 +1,9 @@
-<%= name_input = 'Overeem' %>
+<% if @name_input == nil%>
+  <% @name_input = 'placeholder' %>
+<% end %>
 <% @fighter_data.each do |data| %>
-  <% if data['last_name'].include?(name_input) %>
-    <h1><%= data['first_name'] %> <%= data['nickname'] %> <%= data['lastname'] %></h1>
+  <% if data['last_name'].downcase.include?(@name_input) %>
+    <h1><%= data['first_name'] %> <%= data['nickname'] %> <%= data['last_name'] %></h1>
     <h3>W:<%= data['wins'] %> L: <%= data['losses'] %> D: <%= data['draws'] %></h3>
     <img src="<%= data['left_full_body_image'] %>" alt="<%= data['lastname'] %> profile image">
     <a href="<%= data['link'] %>">More info</a>

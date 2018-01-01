@@ -1,9 +1,23 @@
-<nav class="navbar navbar-brand navbar-nav">
-  <a href="/">Home</a>
-  <a href="/news">News</a>
-  <a href="/media">Recent clips</a>
-  <a href="/search">Fighter Search</a>
-  <a href="/titles">Title Holders</a>
-  <a href="/videos">Videos</a>
-  <a href="/videos/new">Submit new video</a>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/news"><img src="https://1n9jdoerly-flywheel.netdna-ssl.com/wp-content/uploads/2017/02/ufc-logo.png" alt="logo" width='60' ></a></li>
+      <li><a href="/news">News</a></li>
+      <li><a href="/media">Recent clips</a></li>
+      <li><a href="/search">Fighter Search</a></li>
+      <li><a href="/titles">Title Holders</a></li>
+      <li><a href="/videos">Videos</a></li>
+      <li><a href="/videos/new">Submit new video</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/search" method="get">
+      <div class="input-group">
+        <input required type="text" class="form-control" placeholder="Fighter Search" name="fighter_search">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </nav>
