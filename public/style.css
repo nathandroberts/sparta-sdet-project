@@ -4,3 +4,10 @@
 .vid_thumbnail {
   margin: auto;
 }
+#edit_button{
+  display: inline-block;
+  float: left;
+}
+.edit_button {
+  float: left;
+}

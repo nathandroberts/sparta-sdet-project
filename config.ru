@@ -9,3 +9,4 @@ require_relative './controllers/videos_controller.rb'
 use Rack::MethodOverride
 
 run VideosController
+set :public_folder, Proc.new { File.join(root, "static") }
