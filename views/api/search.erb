@@ -1,0 +1,25 @@
+<% if @name_input == nil%>
+  <% @name_input = 'placeholder' %>
+<% end %>
+<% @fighter_data.each do |data| %>
+  <% if data['last_name'].downcase.include?(@name_input) %>
+    <a href="<%= data['link'] %>"><h1 class="text-center"><%= data['first_name'] %> <%= data['nickname'] %> <%= data['last_name'] %></h1></a>
+    <h3 class="text-center">W:<%= data['wins'] %> L: <%= data['losses'] %> D: <%= data['draws'] %></h3>
+    <div class="row">
+      <div class="col-md-5">
+
+      </div>
+      <div class="col-md-7">
+        <img src="<%= data['left_full_body_image'] %>" alt="<%= data['lastname'] %> profile image">
+      </div>
+    </div>
+    <% fighter_media = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/fighters/#{data['id']}/media").body)%>
+    <% fighter_media.each do |media| %>
+      <% if media['mobile_video_url'] %>
+        <h3><%= media['title'] %></h3>
+        <p><%= media['description'] %></p>
+        <video class="video" src="<%= media['mobile_video_url'] %>" controls poster="<%= media['thumbnail'] %>"></video>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
