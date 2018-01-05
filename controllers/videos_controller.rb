@@ -1,3 +1,5 @@
+require 'sinatra/base'
+require 'sinatra/reloader'
 class VideosController < Sinatra::Base
 
   configure :development do
@@ -15,25 +17,24 @@ class VideosController < Sinatra::Base
   end
 
   get '/titles' do
-    @title = 'Title Holders'
+    @title = 'Current Title Holders'
     @title_holder_data = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/fighters/title_holders").body)
     erb :'api/title_holders'
   end
 
   get '/news' do
-    @title = 'News'
+    @title = 'Latest News'
     @news_data = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/news").body)
     erb :'api/news'
   end
 
   get '/media' do
-    @title = 'Recent Clips'
+    @title = 'Recently submitted Clips'
     @media_data = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/media").body)
     erb :'api/media'
   end
 
   get '/search' do
-    @title = 'Fighter Search'
     @fighter_data = JSON.parse(HTTParty.get("http://ufc-data-api.ufc.com/api/v3/iphone/fighters").body)
     @name_input = params[:fighter_search]
     erb :'api/search'
