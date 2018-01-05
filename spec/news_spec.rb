@@ -37,6 +37,12 @@ describe UfcApi do
      expect(@news.get_article_date).to be_a(String)
    end
 
+   it "should return the correct format for article_date" do
+     expect(@news.get_article_date[0,4].to_i).to be_a(Integer)
+     expect(@news.get_article_date[5..6].to_i).to be_a(Integer)
+     expect(@news.get_article_date[8..9].to_i).to be_a(Integer)
+   end
+
    it "should return a string for thumbnail" do
      if @news.get_thumbnail
        expect(@news.get_thumbnail).to be_a(String)
@@ -45,7 +51,7 @@ describe UfcApi do
 
    it "should return a link for thumbnail" do
      if @news.get_thumbnail != ''
-       expect(@news.get_thumbnail[0,7]).to eq('http://')
+       expect(@news.get_thumbnail[0,4]).to eq('http')
      end
    end
 
@@ -57,7 +63,7 @@ describe UfcApi do
 
    it "should return a link for external_url" do
      if @news.get_external_url != ''
-       expect(@news.get_external_url[0,7]).to eq('http://')
+       expect(@news.get_external_url[0,4]).to eq('http')
      end
    end
 

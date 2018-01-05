@@ -27,7 +27,7 @@ describe VideosController do
     it "displays a videos page" do
       get '/videos'
       expect(last_request.path).to eq('/videos')
-      expect(last_response.body).to include("Popular Videos")
+      expect(last_response.body).to include("Popular videos")
     end
 
     it "displays a submit new video page" do

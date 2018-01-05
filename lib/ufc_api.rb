@@ -2,7 +2,6 @@ require_relative 'services/news_service'
 require_relative 'services/media_service'
 require_relative 'services/fighters_service'
 require_relative 'services/title_holders_service'
-require_relative 'services/fighter_media_service'
 
 class UfcApi
 
@@ -10,8 +9,16 @@ class UfcApi
     NewsService.new
   end
 
-
   def media_service
     MediaService.new
   end
+
+  def title_holders_service
+    TitleHolderService.new
+  end
+
+  def fighters_service
+    FightersService.new
+  end
+
 end

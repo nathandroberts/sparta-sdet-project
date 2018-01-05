@@ -7,7 +7,7 @@
     <div class="col-md-3">
       <a href="<%= data['link'] %>"><h3 class="text-center"><%= data['first_name'] %> <%= data['last_name'] %></h3></a>
       <p class="text-center"><%= data['weight_class'].gsub('_', ' ') %></p>
-      <p class="text-center"> W: <%= data['wins'] %> L: <%= data['losses'] %></p>
+      <p class="text-center"> W: <%= data['wins'] %> L: <%= data['losses'] %> D: <%= data['draws'] %></p>
     </div>
     <div class="col-md-4">
       <img  width="200"src="<%= data['belt_thumbnail'] %>" alt="<%= data['last_name'] %> image">
