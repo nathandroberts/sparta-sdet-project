@@ -39,6 +39,7 @@ describe VideosController do
     it "correctly searches for fighters" do
       get '/search?fighter_search=northcutt'
       expect(last_response.body).to include("Northcutt")
+      expect(last_response).to be_ok
     end
 
 

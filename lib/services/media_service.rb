@@ -78,6 +78,4 @@ class MediaService
     @media_data[0]['published_start_date']
   end
 
-
-
 end
