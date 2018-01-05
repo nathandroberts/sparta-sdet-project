@@ -37,12 +37,26 @@ describe UfcApi do
   end
 
   it "should return a string for thumbnail" do
-    expect(@news.get_thumbnail).to be_a(String)
+    if @news.get_thumbnail
+      expect(@news.get_thumbnail).to be_a(String)
+    end
+  end
+
+  it "should return a link for thumbnail" do
+    if @news.get_thumbnail
+      expect(@news.get_thumbnail[0,7]).to eq('http://')
+    end
   end
 
   it "should return a string for external_url" do
     if @news.get_external_url
       expect(@news.get_external_url).to be_a(String)
+    end
+  end
+
+  it "should return a link for external_url" do
+    if @news.get_external_url
+      expect(@news.get_external_url[0,7]).to eq('http://')
     end
   end
 
