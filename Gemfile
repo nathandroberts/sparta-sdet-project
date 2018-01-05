@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 gem 'sinatra'
 gem 'rack'
-ruby '2.3.4'
+gem 'puma'
+ruby '2.4.1'
