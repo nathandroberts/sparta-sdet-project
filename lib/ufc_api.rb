@@ -12,6 +12,6 @@ class UfcApi
 
 
   def media_service
-
+    MediaService.new
   end
 end
