@@ -10,5 +10,5 @@ require './controllers/videos_controller'
 
 use Rack::MethodOverride
 
-run VideosController.new
+run VideosController
 set :public_folder, Proc.new { File.join(root, "static") }
