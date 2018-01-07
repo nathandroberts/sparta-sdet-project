@@ -9,9 +9,14 @@ class UfcShowPage
   VIDEOS_LINK = 'Videos' unless const_defined?(:VIDEOS_LINK)
   SUBMIT_NEW_VIDEO_LINK = 'Submit new video' unless const_defined?(:SUBMIT_NEW_VIDEO_LINK)
   EDIT_BUTTON_LINK = 'edit' unless const_defined?(:EDIT_BUTTON_LINK)
+  DELETE_BUTTON_ID = 'delete_button' unless const_defined?(:DELETE_BUTTON_ID)
 
   def click_edit_button
     click_link(EDIT_BUTTON_LINK)
+  end
+
+  def click_delete_button
+    find_button(DELETE_BUTTON_ID).click
   end
 
   def news_link

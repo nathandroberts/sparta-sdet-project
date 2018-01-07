@@ -14,6 +14,10 @@ class UfcVideosPage
     visit('/videos')
   end
 
+  def video_title_search(text_input)
+    find('h3', text: text_input, exact: true)
+  end
+
   def click_chosen_video(name)
     click_link(name)
   end

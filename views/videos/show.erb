@@ -5,5 +5,5 @@
 <a class="btn btn-primary edit_button" id="edit_button" href="<%= @video.id %>/edit">edit</a>
 <form action="<%= @video.id %>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
-  <input class="btn btn-primary"type="submit" name="name" value="Delete">
+  <input id="delete_button"class="btn btn-primary"type="submit" name="name" value="Delete">
 </form>

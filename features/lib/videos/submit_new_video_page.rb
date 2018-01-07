@@ -6,9 +6,34 @@ class UfcSubmitNewVideoPage
   TITLE_HOLDERS_LINK = 'Title Holders' unless const_defined?(:TITLE_HOLDERS_LINK)
   VIDEOS_LINK = 'Videos' unless const_defined?(:VIDEOS_LINK)
   SUBMIT_NEW_VIDEO_LINK = 'Submit new video' unless const_defined?(:SUBMIT_NEW_VIDEO_LINK)
+  TITLE_FIELD_ID = 'title' unless const_defined?(:TITLE_FIELD_ID)
+  DESCRIPTION_FIELD_ID = 'description' unless const_defined?(:DESCRIPTION_FIELD_ID)
+  EMBED_FIELD_ID = 'embed' unless const_defined?(:EMBED_FIELD_ID)
+  THUMBNAIL_FIELD_ID = 'thumbnail' unless const_defined?(:THUMBNAIL_FIELD_ID)
+  SAVE_BUTTON_ID = 'save' unless const_defined?(:SAVE_BUTTON_ID)
 
   def visit_submit_new_video_page
     visit('/videos/new')
+  end
+
+  def fill_in_title(title)
+    fill_in(TITLE_FIELD_ID, with: title)
+  end
+
+  def fill_in_description(description)
+    fill_in(DESCRIPTION_FIELD_ID, with: description)
+  end
+
+  def fill_in_embed(embed)
+    fill_in(EMBED_FIELD_ID, with: embed)
+  end
+
+  def fill_in_thumbnail(thumbnail)
+    fill_in(THUMBNAIL_FIELD_ID, with: thumbnail)
+  end
+
+  def click_save
+    find_button(SAVE_BUTTON_ID).click
   end
 
   def news_link
