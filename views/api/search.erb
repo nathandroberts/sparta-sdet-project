@@ -1,3 +1,4 @@
+<h1 id="search" class="text-center"><%= @title %></h1>
 <% if @name_input == nil%>
   <% @name_input = 'placeholder' %>
 <% end %>
@@ -18,9 +19,16 @@
     <!-- status errors return arrays with length 2 -->
       <% if media.length != 2 %>
         <% if media['mobile_video_url'] %>
-          <h3><%= media['title'] %></h3>
-          <p><%= media['description'] %></p>
-          <video class="video" src="<%= media['mobile_video_url'] %>" controls poster="<%= media['thumbnail'] %>"></video>
+          <h3 class="text-center" ><%= media['title'] %></h3>
+          <p class="text-center" ><%= media['description'] %></p>
+          <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-10">
+              <video class="video" src="<%= media['mobile_video_url'] %>" controls poster="<%= media['thumbnail'] %>"></video>
+            </div>
+          </div>
         <% end %>
       <% end  %>
     <% end %>
