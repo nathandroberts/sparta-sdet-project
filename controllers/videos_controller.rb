@@ -1,10 +1,10 @@
 require 'sinatra/base'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 class VideosController < Sinatra::Base
 
-  configure :development do
-    register Sinatra::Reloader
-  end
+  # configure :development do
+  #   register Sinatra::Reloader
+  # end
 
   set :root, File.join(File.dirname(__FILE__), '..')
 
