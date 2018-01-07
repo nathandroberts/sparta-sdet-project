@@ -10,12 +10,18 @@ Feature: Site Navigation
 
     Examples:
     | start           | finish           |
-    | media           | news             |
-    | media           | media            |
-    | media           | title_holders    |
-    | media           | videos           |
-    | media           | submit_new_video |
     | news            | media            |
-    | title_holders   | media            |
-    | videos          | media            |
-    | submit_new_video| media            |
+    | news            | news             |
+    | news            | title_holders    |
+    | news            | videos           |
+    | news            | submit_new_video |
+    | media           | news             |
+    | title_holders   | news             |
+    | videos          | news             |
+    | submit_new_video| news             |
+
+    Scenario: If I click on a video then click edit I will be taken to the edit page
+      Given I am on the videos page
+      When I click on a video link
+      And I click on the edit button
+      Then I am sent to the edit page for that video

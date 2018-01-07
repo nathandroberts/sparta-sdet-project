@@ -54,7 +54,7 @@ module UfcSite
   end
 
   def edit_page
-
+    UfcEditPage.new
   end
 
   def videos_page
@@ -66,7 +66,7 @@ module UfcSite
   end
 
   def show_page
-
+    UfcShowPage.new
   end
 
 

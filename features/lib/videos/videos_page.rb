@@ -9,8 +9,13 @@ class UfcVideosPage
   VIDEOS_LINK = 'Videos' unless const_defined?(:VIDEOS_LINK)
   SUBMIT_NEW_VIDEO_LINK = 'Submit new video' unless const_defined?(:SUBMIT_NEW_VIDEO_LINK)
 
+
   def visit_videos_page
     visit('/videos')
+  end
+
+  def click_chosen_video(name)
+    click_link(name)
   end
 
   def news_link
