@@ -18,6 +18,7 @@ gem install rake
 ```
 
 ### Local server setup Instructions (bash terminal)
+Download psql:https://www.postgresql.org/download/
 ```bash
 git clone git@github.com:nathandroberts/sparta-sdet-project.git
 cd sparta-sdet-project
