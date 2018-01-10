@@ -33,3 +33,7 @@ Unit and integration testing: `rspec`
 UI tests: `cucumber`
 
 UI test results saved as html: `cucumber -f html -o test_results/cucumber_results.html`
+
+### Performance tests
+JMeter file containing performance tests stored in the performance_tests folder
+Installing JMeter:http://jmeter.apache.org/download_jmeter.cgi
