@@ -24,7 +24,7 @@ class Video
   # Open connection is Class method that we will use to open a connection the Postgres database. This is not tied to instance of a class but to the class itself
   def self.open_connection
     # Assign the Postgre connect to variable
-    conn = PG.connect(dbname: "ufc")
+    conn = PG.connect(dbname: "postgresql-concentric-59598")
   end
 
   # Class method the get all our post from the db
