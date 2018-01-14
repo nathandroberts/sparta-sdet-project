@@ -2,7 +2,7 @@
 
 https://sleepy-brook-91706.herokuapp.com/news
 
-Building and presenting a RESTful web application in Sinatra using an API. A service object model was created for unit testing with RSpec and a page object model was used for UI testing with Cucumber. Heroku was used to host the application.
+Building and presenting a RESTful web application in Sinatra using an API. A service object model was created for unit testing with RSpec and a page object model was used for UI testing with Cucumber. Performance tests were carried out using Apache JMeter. Heroku was used to host the application.
 
 ### Required rubygems
 
